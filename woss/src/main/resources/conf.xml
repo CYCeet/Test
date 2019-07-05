@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<woss>
+	<gather class="com.briup.bigdata.bd1901.woss.client.GatherImpl">
+		<rawdata-file>C:\\radwtmp</rawdata-file>
+	</gather>
+
+	<client class="com.briup.bigdata.bd1901.woss.client.ClientImpl">
+		<ip>127.0.0.1</ip>
+		<port>56789</port>
+	</client>
+
+	<server class="com.briup.bigdata.bd1901.woss.server.ServerImpl">
+		<port>56789</port>
+	</server>
+
+	<dbstore class="com.briup.bigdata.bd1901.woss.server.DbStoreImpl">
+		<url>jdbc:mysql://127.0.0.1:5724/woss?useSSL=true</url>
+		<driver>com.mysql.jdbc.Driver</driver>
+		<user>root</user>
+		<password>root</password>
+		<batch-size>50</batch-size>
+	</dbstore>
+
+	<logger class="com.briup.bigdata.bd1901.woss.utils.LoggerImpl">
+	</logger>
+
+	<backup class="com.briup.bigdata.bd1901.woss.utils.BackupImpl">
+		<bidrs-map-path>C:\\bidrs.map.txt</bidrs-map-path>
+		<bidrs-list-path>C:\\bidrs.list.txt</bidrs-list-path>
+		<byte-count-path>C:\\byte.count.txt</byte-count-path>
+	</backup>
+</woss>
